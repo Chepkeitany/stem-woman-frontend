@@ -1,5 +1,5 @@
 /**
- * Sample React Native App
+ * Initialized through react-native-cli
  * https://github.com/facebook/react-native
  *
  * @format
