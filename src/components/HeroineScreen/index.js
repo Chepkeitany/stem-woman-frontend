@@ -3,7 +3,7 @@ import { View, Text } from "react-native";
 
 class HeroineScreen extends React.Component {
     static navigationOptions = {
-      drawerLabel: 'heroine'
+      drawerLabel: 'Heroines'
     };
   
     render() {

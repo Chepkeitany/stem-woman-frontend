@@ -10,11 +10,11 @@ import LoginScreen from '../components/LoginScreen';
 
 const MainStack = createDrawerNavigator(
     {
-        home: { screen: HomeScreen },
-        mentors: { screen: MentorScreen },
-        heroines: { screen: HeroineScreen },
-        scholarships: { screen: ScholarshipScreen},
-        conference: { screen: ConferenceScreen},
+        Home: { screen: HomeScreen },
+        Mentors: { screen: MentorScreen },
+        Heroines: { screen: HeroineScreen },
+        Scholarships: { screen: ScholarshipScreen},
+        Conferences: { screen: ConferenceScreen},
     },
     {
         headerMode: 'none'
@@ -23,8 +23,8 @@ const MainStack = createDrawerNavigator(
 
 const RootStack = createSwitchNavigator(
     {
-        main: MainStack,
-        login: LoginScreen,
+        Main: MainStack,
+        Login: LoginScreen,
     }
 )
 

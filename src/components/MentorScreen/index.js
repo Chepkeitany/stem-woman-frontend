@@ -3,7 +3,7 @@ import { View, Text } from "react-native";
 
 class MentorScreen extends React.Component {
     static navigationOptions = {
-      drawerLabel: 'mentor'
+      drawerLabel: 'Mentors'
     };
   
     render() {

@@ -3,7 +3,7 @@ import { View, Text } from "react-native";
 
 class ScholarshipScreen extends React.Component {
     static navigationOptions = {
-      drawerLabel: 'mentor'
+      drawerLabel: 'Scholarships'
     };
   
     render() {

@@ -3,7 +3,7 @@ import { View, Text } from "react-native";
 
 class ConferenceScreen extends React.Component {
     static navigationOptions = {
-      drawerLabel: 'conference'
+      drawerLabel: 'Conferences'
     };
   
     render() {

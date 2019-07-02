@@ -1,16 +1,23 @@
 import React from  "react";
-import { View, Text } from "react-native";
+import { DrawerLayoutAndroid, View, Text } from "react-native";
 
 class HomeScreen extends React.Component {
     static navigationOptions = {
-      drawerLabel: 'home'
+      drawerLabel: 'Home'
     };
   
     render() {
-      return (
-        <View>
-            <Text> HomeScreen </Text>
+      var navigationView = (
+        <View style={{flex: 1, backgroundColor: '#fff'}}>
         </View>
+      );
+      return (
+        <DrawerLayoutAndroid
+          drawerWidth={300}
+          drawerBackgroundColor="#7778ab"
+          drawerPosition={DrawerLayoutAndroid.positions.Left}
+          renderNavigationView={() => navigationView}>
+        </DrawerLayoutAndroid>
       );
     }
   }
