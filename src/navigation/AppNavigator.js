@@ -23,8 +23,8 @@ const MainStack = createDrawerNavigator(
 
 const RootStack = createSwitchNavigator(
     {
-        Main: MainStack,
         Login: LoginScreen,
+        Main: MainStack
     }
 )
 
