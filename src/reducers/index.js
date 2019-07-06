@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import heroine from './heroine';
+import heroines from './heroines';
+import user from './user';
 
 const rootReducer = combineReducers({
-    heroine
+    heroines,
+    user
 });
 
 export default rootReducer;
