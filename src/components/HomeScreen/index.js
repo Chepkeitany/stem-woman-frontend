@@ -1,25 +1,32 @@
-import React from  "react";
-import { DrawerLayoutAndroid, View, Text } from "react-native";
+import React from "react";
+import { DrawerLayoutAndroid, View } from "react-native";
+import { Avatar, Toolbar } from 'react-native-material-ui';
+import Container from '../Container';
 
 class HomeScreen extends React.Component {
-    static navigationOptions = {
-      drawerLabel: 'Home'
-    };
-  
-    render() {
-      var navigationView = (
-        <View style={{flex: 1, backgroundColor: '#fff'}}>
-        </View>
-      );
-      return (
+  static navigationOptions = {
+    drawerLabel: "Home"
+  };
+
+  render() {
+    var navigationView = <View style={{ flex: 1, backgroundColor: "#fff" }} />;
+    return (
+      <Container>
         <DrawerLayoutAndroid
-          drawerWidth={300}
+          drawerWidth={100}
           drawerBackgroundColor="#7778ab"
           drawerPosition={DrawerLayoutAndroid.positions.Left}
-          renderNavigationView={() => navigationView}>
+          renderNavigationView={() => navigationView}
+        >
+        <Toolbar
+          leftElement="menu"
+          centerElement="Stem Woman"
+          rightElement={(<Avatar icon="person" />)}
+        />
         </DrawerLayoutAndroid>
-      );
-    }
+      </Container>
+    );
   }
+}
 
-  export default HomeScreen;
+export default HomeScreen;
