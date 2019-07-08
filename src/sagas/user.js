@@ -45,3 +45,4 @@ export function* loginWithGoogle() {
       yield takeLatest(types.LOGIN_WITH_GOOGLE_REQUEST, loginWithGoogle),
     ]);
   };
+  
