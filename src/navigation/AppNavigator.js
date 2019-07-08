@@ -11,8 +11,8 @@ import LoginScreen from '../components/LoginScreen';
 const MainStack = createDrawerNavigator(
     {
         Home: { screen: HomeScreen },
-        Mentors: { screen: MentorScreen },
         Heroines: { screen: HeroineScreen },
+        Mentors: { screen: MentorScreen },
         Scholarships: { screen: ScholarshipScreen},
         Conferences: { screen: ConferenceScreen},
     },

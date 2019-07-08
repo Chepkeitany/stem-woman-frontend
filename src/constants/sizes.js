@@ -1,5 +1,4 @@
 const sizes = {
-    drawerWidth: 100,
     profilePhotoSize: 40
 }
 
