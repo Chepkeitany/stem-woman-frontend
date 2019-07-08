@@ -11,6 +11,7 @@ class ConferenceScreen extends React.Component {
   
     render() {
       const { navigation } = this.props;
+
       return (
         <Container>
           <Toolbar title="Conferences" navigation={navigation} />

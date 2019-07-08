@@ -29,3 +29,4 @@ class HeroineScreen extends React.Component {
   });
 
   export default connect(mapStateToProps, null)(HeroineScreen);
+  
