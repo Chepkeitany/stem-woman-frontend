@@ -1,39 +1,33 @@
-import React from "react";
-import { Image, DrawerLayoutAndroid, Text, View } from "react-native";
+import React, { Component } from "react";
+import { Image, Text, View } from "react-native";
 import { Toolbar } from 'react-native-material-ui';
 import { connect } from "react-redux";
 import Container from '../Container';
 
-import colors from '../../constants/colors';
-import sizes from '../../constants/sizes';
 import styles from "./styles"
 
-class HomeScreen extends React.Component {
+class HomeScreen extends Component {
   static navigationOptions = {
     drawerLabel: "Home"
   };
 
   render() {
-    const { user } = this.props;
-    var navigationView = <View style={{ backgroundColor: colors.white }} />;
+    const { user, navigation } = this.props;
     return (
       <Container>
-        <DrawerLayoutAndroid
-          drawerWidth={sizes.drawerWidth}
-          drawerBackgroundColor={colors.drawerColor}
-          drawerPosition={DrawerLayoutAndroid.positions.Left}
-          renderNavigationView={() => navigationView}
-        >
-          <Toolbar
-            leftElement="menu"
-            centerElement="Stem Woman"
-            rightElement={(<View style={styles.profilePhoto}>
-              <Image
-                style={styles.icon}
-                source={{ uri: user.user.photo }} />
-            </View>)}
-          />
-        </DrawerLayoutAndroid>
+        <Toolbar
+          leftElement="menu"
+          centerElement="Stem Woman"
+          rightElement={(<View style={styles.profilePhoto}>
+            <Image
+              style={styles.icon}
+              source={{ uri: user.user.photo }} />
+          </View>)}
+          onLeftElementPress={() => navigation.openDrawer()}
+        />
+        <View>
+          <Text> Home Screen </Text>
+        </View>
       </Container>
     );
   }
