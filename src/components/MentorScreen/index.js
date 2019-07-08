@@ -1,18 +1,26 @@
-import React from  "react";
+import React from "react";
 import { View, Text } from "react-native";
 
-class MentorScreen extends React.Component {
-    static navigationOptions = {
-      drawerLabel: 'Mentors'
-    };
-  
-    render() {
-      return (
-        <View>
-            <Text> MentorScreen </Text>
-        </View>
-      );
-    }
-  }
+import Container from "../Container";
+import Toolbar from "../Toolbar";
 
-  export default MentorScreen;
+class MentorScreen extends React.Component {
+  static navigationOptions = {
+    drawerLabel: 'Mentors'
+  };
+
+  render() {
+    const { navigation } = this.props;
+
+    return (
+      <Container>
+        <Toolbar title="Mentors" navigation={navigation} />
+        <View>
+          <Text> MentorScreen </Text>
+        </View>
+      </Container>
+    );
+  }
+}
+
+export default MentorScreen;

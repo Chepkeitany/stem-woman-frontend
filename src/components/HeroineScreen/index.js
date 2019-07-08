@@ -1,5 +1,9 @@
 import React from  "react";
+import { connect } from "react-redux";
 import { View, Text } from "react-native";
+
+import Container from '../Container';
+import Toolbar from '../Toolbar';
 
 class HeroineScreen extends React.Component {
     static navigationOptions = {
@@ -7,12 +11,21 @@ class HeroineScreen extends React.Component {
     };
   
     render() {
+      const { navigation } = this.props;
+
       return (
-        <View>
-            <Text> HeroineScreen </Text>
-        </View>
+        <Container>
+          <Toolbar title="Heroines" navigation={navigation} />
+          <View>
+            <Text> Heroines Screen </Text>
+          </View>
+        </Container>
       );
     }
   }
 
-  export default HeroineScreen;
+  const mapStateToProps = (state) => ({
+    user: state.user
+  });
+
+  export default connect(mapStateToProps, null)(HeroineScreen);
