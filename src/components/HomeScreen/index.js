@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import { Image, Text, View } from "react-native";
-import { Toolbar } from 'react-native-material-ui';
+import { Text, View } from "react-native";
 import { connect } from "react-redux";
 import Container from '../Container';
-
-import styles from "./styles"
+import Toolbar from '../Toolbar';
 
 class HomeScreen extends Component {
   static navigationOptions = {
@@ -12,19 +10,11 @@ class HomeScreen extends Component {
   };
 
   render() {
-    const { user, navigation } = this.props;
+    const { navigation } = this.props;
+
     return (
       <Container>
-        <Toolbar
-          leftElement="menu"
-          centerElement="Stem Woman"
-          rightElement={(<View style={styles.profilePhoto}>
-            <Image
-              style={styles.icon}
-              source={{ uri: user.user.photo }} />
-          </View>)}
-          onLeftElementPress={() => navigation.openDrawer()}
-        />
+        <Toolbar title="Stem Woman" navigation={navigation} />
         <View>
           <Text> Home Screen </Text>
         </View>
