@@ -1,4 +1,4 @@
-import { all, call, fork, takeLatest, put } from 'redux-saga/effects';
+import { all, call, takeLatest, put } from 'redux-saga/effects';
 import { GoogleSignin, statusCodes } from 'react-native-google-signin';
 import NavigationService from '../navigation/NavigationService';
 
@@ -40,12 +40,8 @@ export function* loginWithGoogle() {
     }
   }
   
-  export function* watchGoogleLogin() {
-    yield takeLatest(types.LOGIN_WITH_GOOGLE_REQUEST, loginWithGoogle);
-  }
-
   export function* userSaga() {
     yield all([
-      fork(watchGoogleLogin),
+      yield takeLatest(types.LOGIN_WITH_GOOGLE_REQUEST, loginWithGoogle),
     ]);
-  }
+  };
