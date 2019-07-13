@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Image, View, Text } from "react-native";
+import { ActivityIndicator, Image, View, Text } from "react-native";
 import { Card } from "react-native-material-ui";
 
 import Container from "../Container";
@@ -41,7 +41,7 @@ class MentorScreen extends React.Component {
               <Text> {mentor.location}</Text>
             </View>
           </Card>
-        )) : <Text> No data </Text>}
+        )) : <ActivityIndicator size="large" color={colors.secondaryColor}/>}
 
       </Container>
     );

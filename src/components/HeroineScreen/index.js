@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Image, ScrollView, Text, View } from "react-native";
+import { ActivityIndicator, Image, ScrollView, Text, View } from "react-native";
 import { BottomNavigation, Card } from 'react-native-material-ui';
 
 import Container from '../Container';
@@ -50,7 +50,7 @@ class HeroineScreen extends React.Component {
                   {(heroine.period_alive)? (<Text style={{ backgroundColor: backgroundColor(heroines.active), color: colors.white }}>{heroine.period_alive} </Text>): null}
                 </View>
               </Card>
-          )) : (<Text> No data </Text>)}
+          )) : (<ActivityIndicator size="large" color={colors.primaryColor}/>)}
         </ScrollView>
         <BottomNavigation active={heroines.active} hidden={false} >
           <BottomNavigation.Action
