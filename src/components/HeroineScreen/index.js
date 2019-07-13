@@ -26,7 +26,7 @@ class HeroineScreen extends React.Component {
         <Toolbar title="Heroines" navigation={navigation} />
         <ScrollView>
           {(data) ? data.map(heroine => (
-              <Card key={heroine} style={{
+              <Card key={heroine.id} style={{
                 container: {
                   flex: 1,
                   flexDirection: 'row',
