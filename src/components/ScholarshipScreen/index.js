@@ -8,7 +8,7 @@ import Toolbar from "../Toolbar";
 import colors from "../../constants/colors";
 import { fetchScholarships } from "../../actions/scholarships";
 import { ScrollView } from "react-native-gesture-handler";
-import styles from "./styles";
+import styles from "../../constants/styles";
 
 class ScholarshipScreen extends React.Component {
   static navigationOptions = {
