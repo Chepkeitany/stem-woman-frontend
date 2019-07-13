@@ -14,7 +14,7 @@ class HomeScreen extends Component {
 
     return (
       <Container>
-        <Toolbar title="Stem Woman" navigation={navigation} />
+        <Toolbar title="Home" navigation={navigation} />
         <View>
           <Text> Home Screen </Text>
         </View>

@@ -9,12 +9,19 @@ const heroines = (state = initialState, {type, payload } ) => {
     switch(type) {
         case types.FETCH_HEROINES:
             return {
-                ...state
-            };
+                ...state,
+                loading: true
+        };
         case types.SET_ACTIVE_HEROINES:
             return {
                 ...state,
-                active: payload.heroines.active
+                active: payload.active,
+                loading: false
+        }
+        case types.SET_HEROINES_DATA:
+            return {
+                ...state,
+                ...payload
             }
         default:
             return state;
