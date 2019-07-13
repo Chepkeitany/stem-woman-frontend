@@ -22,19 +22,19 @@ const styles = StyleSheet.create({
   },
 
   modernWomenTitle: {
-    color: colors.modernWomen,
+    color: colors.tertiaryColor,
   },
   modernWomenPhrase: {
-    color: colors.modernWomen,
+    color: colors.tertiaryColor,
     fontWeight: 'bold'
   },
 
 
   untoldStoriesTitle: {
-    color: colors.untoldStories,
+    color: colors.secondaryColor
   },
   untoldStoriesPhrase: {
-    color: colors.untoldStories,
+    color: colors.secondaryColor,
     fontWeight: 'bold'
 },
 

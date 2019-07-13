@@ -1,26 +1,59 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { connect } from "react-redux";
+import { Image, View, Text } from "react-native";
+import { Card } from "react-native-material-ui";
 
 import Container from "../Container";
 import Toolbar from "../Toolbar";
+
+import { fetchMentors } from "../../actions/mentors";
+import commonStyles from "../../constants/styles";
+import colors from "../../constants/colors";
 
 class MentorScreen extends React.Component {
   static navigationOptions = {
     drawerLabel: 'Mentors'
   };
 
+  componentDidMount() {
+    const { dispatchFetchMentorsRequest } = this.props;
+    dispatchFetchMentorsRequest();
+  }
+
   render() {
-    const { navigation } = this.props;
+    const { mentors, navigation } = this.props;
 
     return (
       <Container>
         <Toolbar title="Mentors" navigation={navigation} />
-        <View>
-          <Text> MentorScreen </Text>
-        </View>
+        {(mentors) ? mentors.map(mentor => (
+          <Card key={mentor.id} style={{ container: commonStyles.cardContainer }}>
+            <View style={commonStyles.twoColumnWidth}>
+              <Text style={{ backgroundColor: colors.secondaryColor, color: colors.white }}> {mentor.name} </Text>
+              <Text> {mentor.description} </Text>
+            </View>
+            <View style={commonStyles.twoColumnWidth}>
+              <Image source={{ uri: mentor.photo_url }} style={{ width: 100, height: 100, marginLeft: 10 }} />
+              {
+                mentor.skills.map(skill => (<Text key={skill}>{skill}</Text> ))
+              }
+              <Text> {mentor.available_timings} {mentor.timezone}</Text>
+              <Text> {mentor.location}</Text>
+            </View>
+          </Card>
+        )) : <Text> No data </Text>}
+
       </Container>
     );
   }
 }
 
-export default MentorScreen;
+const mapStateToProps = (state) => ({
+  mentors: state.mentors.mentors
+});
+
+const mapDispatchToProps = {
+  dispatchFetchMentorsRequest: fetchMentors,
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(MentorScreen);
