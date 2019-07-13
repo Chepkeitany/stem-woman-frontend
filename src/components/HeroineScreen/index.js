@@ -13,9 +13,9 @@ const backgroundColor = (heroine) => {
     case 'pioneers':
       return colors.primaryColor;
     case 'untold_stories':
-      return colors.untoldStories;
+      return colors.secondaryColor;
     case 'modern_women':
-      return colors.modernWomen;
+      return colors.tertiaryColor;
     default:
       return colors.primaryColor;
   }
