@@ -1,7 +1,7 @@
 
 import types from '../actions/mentors';
 
-const initialState = { loading: false, mentors: [] };
+const initialState = { loading: false };
 const mentors = (state = initialState, {type, payload } ) => {
 
     switch(type) {
