@@ -11,7 +11,6 @@ const mentors = (state = initialState, {type, payload } ) => {
                 loading: true
         };
         case types.SET_MENTORS:
-        console.log(mentors);
             return {
                 ...state,
                 ...payload,
