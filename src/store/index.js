@@ -3,7 +3,7 @@ import createSagaMiddleware from "redux-saga";
 import rootReducer from '../reducers';
 import rootSaga from '../sagas';
 
-const initialState = {};
+const initialState = { heroines: { active: "pioneers"} };
 
 const sagaMiddleware = createSagaMiddleware();
 
