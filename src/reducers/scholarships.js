@@ -1,16 +1,16 @@
 
-import types from '../actions/mentors';
+import types from '../actions/scholarships';
 
 const initialState = { loading: false };
-const mentors = (state = initialState, {type, payload } ) => {
+const scholarships = (state = initialState, {type, payload } ) => {
 
     switch(type) {
-        case types.FETCH_MENTORS:
+        case types.FETCH_SCHOLARSHIPS:
             return {
                 ...state,
                 loading: true
         };
-        case types.SET_MENTORS:
+        case types.SET_SCHOLARSHIPS:
             return {
                 ...state,
                 ...payload,
@@ -21,4 +21,4 @@ const mentors = (state = initialState, {type, payload } ) => {
     }
 };
 
-export default mentors;
+export default scholarships;
