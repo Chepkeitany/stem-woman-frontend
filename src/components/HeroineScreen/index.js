@@ -8,6 +8,19 @@ import Toolbar from '../Toolbar';
 import { setActiveHeroines, fetchHeroines } from "../../actions/heroines";
 import colors from "../../constants/colors";
 
+const backgroundColor = (heroine) => {
+  switch(heroine) {
+    case 'pioneers':
+      return colors.primaryColor;
+    case 'untold_stories':
+      return colors.untoldStories;
+    case 'modern_women':
+      return colors.modernWomen;
+    default:
+      return colors.primaryColor;
+  }
+}
+
 class HeroineScreen extends React.Component {
   static navigationOptions = {
     drawerLabel: 'Heroines'
@@ -35,12 +48,12 @@ class HeroineScreen extends React.Component {
                 }
               }}>
                 <View style={{ width: '50%' }}>
-                  <Text style={{ backgroundColor: colors.primaryColor, color: colors.white }}>{heroine.name} </Text>
+                  <Text style={{ backgroundColor: backgroundColor(heroines.active), color: colors.white }}>{heroine.name} </Text>
                   <Text>{heroine.description} </Text>
                 </View>
                 <View style={{ width: '50%' }}>
                   <Image source={{ uri: heroine.photo_url }} style={{ width: 200, height: 200, marginLeft: 10 }} />
-                  {(heroine.period_alive)? (<Text style={{ backgroundColor: colors.primaryColor, color: colors.white }}>{heroine.period_alive} </Text>): null}
+                  {(heroine.period_alive)? (<Text style={{ backgroundColor: backgroundColor(heroines.active), color: colors.white }}>{heroine.period_alive} </Text>): null}
                 </View>
               </Card>
           )) : (<Text> No data </Text>)}
