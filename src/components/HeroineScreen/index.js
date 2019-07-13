@@ -7,6 +7,7 @@ import Container from '../Container';
 import Toolbar from '../Toolbar';
 import { setActiveHeroines, fetchHeroines } from "../../actions/heroines";
 import colors from "../../constants/colors";
+import commonStyles from "../../constants/styles";
 
 const backgroundColor = (heroine) => {
   switch(heroine) {
@@ -39,19 +40,12 @@ class HeroineScreen extends React.Component {
         <Toolbar title="Heroines" navigation={navigation} />
         <ScrollView>
           {(data) ? data.map(heroine => (
-              <Card key={heroine.id} style={{
-                container: {
-                  flex: 1,
-                  flexDirection: 'row',
-                  flexWrap: 'wrap',
-                  alignItems: 'flex-start'
-                }
-              }}>
-                <View style={{ width: '50%' }}>
+              <Card key={heroine.id} style={{ container: commonStyles.cardContainer}}>
+                <View style={commonStyles.twoColumnWidth}>
                   <Text style={{ backgroundColor: backgroundColor(heroines.active), color: colors.white }}>{heroine.name} </Text>
                   <Text>{heroine.description} </Text>
                 </View>
-                <View style={{ width: '50%' }}>
+                <View style={commonStyles.twoColumnWidth}>
                   <Image source={{ uri: heroine.photo_url }} style={{ width: 200, height: 200, marginLeft: 10 }} />
                   {(heroine.period_alive)? (<Text style={{ backgroundColor: backgroundColor(heroines.active), color: colors.white }}>{heroine.period_alive} </Text>): null}
                 </View>
