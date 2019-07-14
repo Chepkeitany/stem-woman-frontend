@@ -3,7 +3,7 @@ const colors = {
     primaryColor: "#387d60",
     white: '#ffffff',
     secondaryColor: "#387390",
-    tertiaryColor: "#352b54"
+    tertiaryColor: "#8871d0"
 }
 
 export default colors;
