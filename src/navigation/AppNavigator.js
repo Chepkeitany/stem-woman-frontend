@@ -4,6 +4,7 @@ import HomeScreen from '../components/HomeScreen';
 import MentorScreen from '../components/MentorScreen';
 import ScholarshipScreen from '../components/ScholarshipScreen';
 import ConferenceScreen from '../components/ConferenceScreen';
+import ResourceScreen from '../components/ResourceScreen';
 import LoginScreen from '../components/LoginScreen';
 
 
@@ -15,6 +16,8 @@ const MainStack = createDrawerNavigator(
         Mentors: { screen: MentorScreen },
         Scholarships: { screen: ScholarshipScreen},
         Conferences: { screen: ConferenceScreen},
+        'STEM Resources': { screen: ResourceScreen },
+
     },
     {
         headerMode: 'none'
