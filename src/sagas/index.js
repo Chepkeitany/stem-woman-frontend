@@ -3,6 +3,7 @@ import { conferenceSaga } from './conferences';
 import { heroineSaga } from './heroines';
 import { mentorSaga } from './mentors';
 import { scholarshipSaga } from './scholarships';
+import { resourceSaga } from './resources';
 import { userSaga } from './user';
 
 function* rootSaga() {
@@ -11,6 +12,7 @@ function* rootSaga() {
       fork(heroineSaga),
       fork(mentorSaga),
       fork(scholarshipSaga),
+      fork(resourceSaga),
       fork(userSaga)
     ]);
   }
