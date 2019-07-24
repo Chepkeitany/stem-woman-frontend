@@ -14,6 +14,13 @@ const styles = StyleSheet.create({
     bold: {
         fontWeight: "bold"
     },
+    category: 
+    {
+        fontWeight: "bold",
+        textAlign: "center",
+        color: colors.white,
+        backgroundColor: colors.secondaryColor,
+    },
     name: {
         color: colors.white,
         backgroundColor: colors.secondaryColor

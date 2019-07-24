@@ -3,6 +3,7 @@ import conferences from './conferences';
 import heroines from './heroines';
 import mentors from './mentors';
 import scholarships from './scholarships';
+import resources from './resources';
 import user from './user';
 
 const rootReducer = combineReducers({
@@ -10,6 +11,7 @@ const rootReducer = combineReducers({
     heroines,
     mentors,
     scholarships,
+    resources,
     user
 });
 
