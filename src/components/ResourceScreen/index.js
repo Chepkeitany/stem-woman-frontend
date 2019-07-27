@@ -28,7 +28,7 @@ class ResourceScreen extends React.Component {
             <ScrollView>
             {resources.map(resource => (
                 <Card key={resource.id}>
-                <Text style={styles.name}>{resource.name} </Text>
+                <Text style={styles.resource_name}>{resource.name} </Text>
                 <Text><Text style={styles.bold}>Topics:</Text>{resource.topics.map(topic =>(<Text > { topic } </Text>))} </Text>
                 <Text><Text style={styles.bold}>Link: </Text> {resource.link} </Text>
                 <Text><Text style={styles.bold}>Category:</Text> <Text style={styles.category}>{resource.category}</Text></Text>

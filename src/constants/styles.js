@@ -24,6 +24,10 @@ const styles = StyleSheet.create({
     name: {
         color: colors.white,
         backgroundColor: colors.secondaryColor
+    },
+    resource_name: {
+        color: colors.white,
+        backgroundColor: colors.primaryColor
     }
 });
 
